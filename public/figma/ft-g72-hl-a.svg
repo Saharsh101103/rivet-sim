@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="58.9687" height="42.7882" viewBox="0 0 58.9687 42.7882" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mask group" style="mix-blend-mode:plus-lighter" opacity="0.7" filter="url(#filter0_f_0_532)">
+<mask id="mask0_0_532" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="7" width="47" height="29">
+<path id="Ellipse 804" d="M52.9609 33.3689C49.748 40.3719 42.4321 25.1319 32.5253 20.5868C22.6185 16.0416 4.77617 21.8004 7.98912 14.7973C11.2021 7.79425 23.3533 5.64886 36.4047 10.0994C49.4561 14.5499 56.1739 26.3658 52.9609 33.3689Z" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_0_532)">
+<path id="Subtract" d="M21.6414 8.53179C41.907 8.53179 58.3355 22.6562 58.3357 40.0796C58.3357 49.9116 53.104 58.6922 44.9041 64.4781C44.6292 50.593 31.316 39.4089 14.9295 39.4087C3.32408 39.4087 -6.74054 45.0192 -11.7238 53.2252C-13.8603 49.2233 -15.0529 44.7712 -15.0529 40.0796C-15.0527 22.6562 1.37583 8.53188 21.6414 8.53179Z" fill="#FF8BDB"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_0_532" x="5.81742" y="6.74182" width="49.7291" height="30.2289" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.894988" result="effect1_foregroundBlur_0_532"/>
+</filter>
+</defs>
+</svg>

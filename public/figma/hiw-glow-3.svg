@@ -1,0 +1,27 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="737.39" height="471.999" viewBox="0 0 737.39 471.999" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Gradient Frames 3" filter="url(#filter0_f_0_446)">
+<g id="Back" filter="url(#filter1_f_0_446)">
+<ellipse cx="368.695" cy="236" rx="268.695" ry="136" fill="#FACFA9"/>
+</g>
+<g id="Front" filter="url(#filter2_f_0_446)">
+<ellipse cx="368.695" cy="287.603" rx="238.699" ry="84.3962" fill="#FF1BB8"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_0_446" x="-0.000305176" y="0" width="737.39" height="471.999" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="49.9999" result="effect1_foregroundBlur_0_446"/>
+</filter>
+<filter id="filter1_f_0_446" x="47.1252" y="47.1252" width="643.139" height="377.749" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="26.4374" result="effect1_foregroundBlur_0_446"/>
+</filter>
+<filter id="filter2_f_0_446" x="77.1214" y="150.333" width="583.147" height="274.542" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="26.4374" result="effect1_foregroundBlur_0_446"/>
+</filter>
+</defs>
+</svg>

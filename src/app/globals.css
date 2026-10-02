@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0e12;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: #0a0e12;
+  --color-pink: #ff1bb8;
+  --font-sans: var(--font-inter-tight);
+  --font-display: var(--font-bricolage);
+  --font-tiktok: var(--font-tiktok-sans);
+  --ease-rivet: cubic-bezier(0.765, 0, 0.326, 0.996);
+  --ease-rivet-footer: cubic-bezier(0.8249, 0.0028, 0.2316, 1.0028);
+  --ease-spring: linear(0, 0.0284, 0.0997, 0.1965, 0.3053, 0.4166, 0.5237, 0.622, 0.7093, 0.7843, 0.8469, 0.8978, 0.9379, 0.9686, 0.9911, 1.007, 1.0174, 1.0236, 1.0265, 1.0271, 1.0261, 1.024, 1.0213, 1.0183, 1.0153, 1.0124, 1.0098, 1.0075, 1.0055, 1.0039, 1.0025, 1.0015, 1.0007, 1.0001, 0.9997, 0.9995, 0.9993, 0.9993, 0.9993, 0.9993, 1);
+}
+
+/* Stories section animation */
+@keyframes story-reveal {
+  from {
+    clip-path: inset(0 16px 0 16px round 80px 80px 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0 round 0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .story-reveal {
+    animation: story-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-reveal {
+    animation: none;
+  }
+}
+
+/* ------------------------------------------------------------------------------------
+   Intro  Splash Animation
+------------------------------------------------------------------------------------ */
+@keyframes intro-from {
+  from {
+    translate: var(--ix, 0px) var(--iy, 0px);
+    rotate: var(--ir, 0deg);
+    scale: var(--is, 1);
+  }
+}
+@keyframes intro-fade-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes intro-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.intro {
+  animation: intro-from 1.6s var(--ease-rivet) 0.9s both;
+}
+.intro-fade-out {
+  animation: intro-fade-out 1.6s var(--ease-rivet) 0.9s both;
+}
+.intro-fade-in {
+  animation: intro-fade-in 1.6s var(--ease-rivet) 0.9s both;
+}
+
+/* ------------------------------------------------------------------------------------
+   Scroll-linked animations 
+   ------------------------------------------------------------------------------------ */
+@keyframes sd-exit {
+  to {
+    translate: var(--xx, 0px) var(--xy, 0px);
+    rotate: var(--xr, 0deg);
+    scale: var(--xs, 1);
+    opacity: var(--xo, 1);
+    filter: blur(var(--xb, 0px));
+  }
+}
+@keyframes sd-enter {
+  from {
+    translate: var(--ex, 0px) var(--ey, 0px);
+    rotate: var(--er, 0deg);
+    scale: var(--es, 1);
+    opacity: var(--eo, 1);
+    filter: blur(var(--eb, 0px));
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .timeline-hero {
+    view-timeline-name: --hero;
+  }
+  .timeline-people {
+    view-timeline-name: --people;
+  }
+  .timeline-why {
+    view-timeline-name: --why;
+  }
+  .sd-exit-hero,
+  .sd-exit-people,
+  .sd-exit-why {
+    animation: sd-exit linear forwards;
+    animation-range: exit 0% exit 100%;
+  }
+  .sd-exit-hero {
+    animation-timeline: --hero;
+  }
+  .sd-exit-people {
+    animation-timeline: --people;
+  }
+  .sd-exit-why {
+    animation-timeline: --why;
+  }
+  .sd-enter-why,
+  .sd-enter-people {
+    animation: sd-enter linear both;
+    animation-range: entry 0% entry 100%;
+  }
+  .sd-enter-why {
+    animation-timeline: --why;
+  }
+  .sd-enter-people {
+    animation-timeline: --people;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro,
+  .intro-fade-in,
+  .sd-exit-hero,
+  .sd-exit-people,
+  .sd-exit-why,
+  .sd-enter-why,
+  .sd-enter-people {
+    animation: none;
+  }
+  .intro-fade-out {
+    display: none;
+  }
+}
+
+/* Footer avatars drop in from above, once the footer is revealed. */
+@keyframes avatar-drop {
+  from {
+    translate: var(--drop-x) var(--drop-y);
+    rotate: var(--drop-r);
+  }
+  to {
+    translate: 0 0;
+    rotate: 0deg;
+  }
+}
+
+.avatar-drop {
+  translate: var(--drop-x) var(--drop-y);
+  rotate: var(--drop-r);
+}
+
+.avatar-drop[data-active="true"] {
+  animation: avatar-drop var(--drop-duration) var(--ease-spring) var(--drop-delay) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-drop {
+    translate: 0 0;
+    rotate: 0deg;
+  }
+  .avatar-drop[data-active="true"] {
+    animation: none;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter-tight), Arial, Helvetica, sans-serif;
+}
